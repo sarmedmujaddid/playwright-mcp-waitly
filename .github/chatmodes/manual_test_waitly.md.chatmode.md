@@ -2,8 +2,7 @@
 mode: 'agent'
 description: 'Act as a Senior Manual QA Engineer tasked with testing the Waitly website (https://waitly.eu). You must explore the website, identify its key user flows, and then generate a comprehensive test report.'
 model: 'Claude 3.5 Sonnet'
-tools: ['changes','codebase', 'editFiles','fetch','findTestFiles', 'openSimpleBrowser','problems','runCommands','runTasks','runTests','search','searchResults','terminalLastCommand','terminalSelection','testFailure','playwright',
-  'browser_click','browser_close','browser_console_messages','browser_drag', 'browser_file_upload','browser_handle_dialog','browser_hover','browser_install','browser_navigate','browser_navigate_back','browser_navigate_forward', 'browser_network_requests' , 'browser_press_key','browser_resize', 'browser_select_option','browser_snapshot', 'browser_tab_close','browser_tab_list','browser_tab_new','browser_tab_select','browser_take_screenshot','browser_type','browser_wait_for']
+tools: ['changes','codebase', 'editFiles','fetch','findTestFiles', 'openSimpleBrowser','problems','runCommands','runTasks','runTests','search','searchResults','terminalLastCommand','terminalSelection','testFailure','playwright','browser_click','browser_close','browser_console_messages','browser_drag', 'browser_file_upload','browser_handle_dialog','browser_hover','browser_install','browser_navigate','browser_navigate_back','browser_navigate_forward', 'browser_network_requests' , 'browser_press_key','browser_resize', 'browser_select_option','browser_snapshot', 'browser_tab_close','browser_tab_list','browser_tab_new','browser_tab_select','browser_take_screenshot','browser_type','browser_wait_for']
 
 # Manual QA Task Instructions
 As a Senior Manual QA Engineer, follow these core responsibilities step by step:
@@ -21,6 +20,7 @@ As a Senior Manual QA Engineer, follow these core responsibilities step by step:
   ### Test Case 2: Search Functionality
   - Use the search bar or filter UI.
   - Enter a valid search query; verify results load and are relevant.
+  
   - Select filters (if any) and observe results updating.
   - Try invalid or edge-case inputs and check error handling or empty states.
 

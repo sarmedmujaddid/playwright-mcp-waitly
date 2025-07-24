@@ -132,3 +132,48 @@ dist
 
 .DS_Store
 .DS_Store?
+
+# Playwright specific
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+**/test-results/
+**/playwright-report/
+**/playwright/.cache/
+**/screenshots/
+**/videos/
+**/traces/
+
+# Allure specific
+/allure-results/
+/allure-report/
+**/allure-results/
+**/allure-report/
+
+# Visual regression tests
+**/visual-snapshots/actual/
+**/visual-snapshots/diff/
+!**/visual-snapshots/baseline/
+
+# VSCode specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Test data and configuration
+/test-data/*.local.json
+**/config/*.local.ts
+**/config/*.local.js
+
+# Temporary files
+*.swp
+*.swo
+.idea/
+*.iml
+.project
+.classpath
+*.tmp
+*.temp
