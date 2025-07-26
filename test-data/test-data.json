@@ -1,0 +1,79 @@
+{
+  "users": {
+    "standard": {
+      "email": "test.user@example.com",
+      "password": "Test123!",
+      "name": "Test User"
+    },
+    "admin": {
+      "email": "admin@example.com",
+      "password": "Admin123!",
+      "name": "Admin User"
+    }
+  },
+  "properties": {
+    "berlin": {
+      "id": "berlin-001",
+      "title": "Modern Apartment in Berlin",
+      "location": "Berlin, Germany",
+      "price": "1200€",
+      "rooms": 2,
+      "area": "75m²",
+      "amenities": ["Parking", "Elevator", "Balcony"]
+    },
+    "munich": {
+      "id": "munich-001",
+      "title": "Luxury Condo in Munich",
+      "location": "Munich, Germany",
+      "price": "2000€",
+      "rooms": 3,
+      "area": "120m²",
+      "amenities": ["Garden", "Garage", "Pool"]
+    }
+  },
+  "searchQueries": {
+    "valid": [
+      {
+        "location": "Berlin",
+        "expectedResults": 50,
+        "filters": {
+          "minPrice": "800",
+          "maxPrice": "2000",
+          "rooms": 2
+        }
+      },
+      {
+        "location": "Munich",
+        "expectedResults": 30,
+        "filters": {
+          "minPrice": "1000",
+          "maxPrice": "3000",
+          "rooms": 3
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "location": "InvalidCity123",
+        "expectedResults": 0,
+        "errorMessage": "No results found"
+      }
+    ]
+  },
+  "forms": {
+    "contact": {
+      "valid": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+49123456789",
+        "message": "I am interested in viewing this property"
+      },
+      "invalid": {
+        "name": "",
+        "email": "invalid-email",
+        "phone": "123",
+        "message": ""
+      }
+    }
+  }
+}
